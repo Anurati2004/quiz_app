@@ -10,7 +10,7 @@ export default function Quiz() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://quiz-backend-dofg.onrender.com")
+    fetch("https://quiz-backend-dofg.onrender.com/api/questions")
       .then(res => res.json())
       .then(data => setQuestions(data))
       .catch(err => console.error("Failed to fetch questions:", err));
